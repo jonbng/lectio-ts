@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { buildPostbackData, extractAspNetFields } from "@/session/asp-net.js";
 import { describe, expect, it } from "vitest";
+import { buildPostbackData, extractAspNetFields } from "@/session/asp-net.js";
 
 const fixturesDir = join(__dirname, "../../fixtures");
 

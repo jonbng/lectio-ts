@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "tsup",
+    "schedule": "bun run scripts/schedule-demo.ts",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",

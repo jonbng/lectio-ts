@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { parseSchedule } from "@/parsers/schedule.js";
 import { describe, expect, it } from "vitest";
+import { parseSchedule } from "@/parsers/schedule.js";
 
 const fixturesDir = join(__dirname, "../../fixtures");
 

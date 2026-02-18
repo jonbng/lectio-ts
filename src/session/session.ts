@@ -2,7 +2,7 @@ import fetchCookie from "fetch-cookie";
 import { Cookie, CookieJar } from "tough-cookie";
 import { fetch as undiciFetch } from "undici";
 import { NetworkError, SessionExpiredError } from "../errors/index.js";
-import { type Logger, createLogger } from "../utils/debug.js";
+import { createLogger, type Logger } from "../utils/debug.js";
 import { buildLectioUrl, isLoginPage } from "../utils/url.js";
 
 interface FetchInit {

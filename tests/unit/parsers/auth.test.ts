@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { isLoginPageHtml, parseAuthState } from "@/parsers/auth.js";
 import { describe, expect, it } from "vitest";
+import { isLoginPageHtml, parseAuthState } from "@/parsers/auth.js";
 
 const fixturesDir = join(__dirname, "../../fixtures");
 

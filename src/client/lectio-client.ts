@@ -4,7 +4,7 @@ import { parseSchedule } from "../parsers/schedule.js";
 import type { WeekSchedule } from "../schemas/schedule.js";
 import type { SessionInfo } from "../schemas/session.js";
 import { Session } from "../session/session.js";
-import { type Logger, createLogger } from "../utils/debug.js";
+import { createLogger, type Logger } from "../utils/debug.js";
 
 export interface LectioClientOptions {
 	schoolId: number;
@@ -58,10 +58,7 @@ export class LectioClient {
 	 * Fetches the weekly schedule.
 	 * Optionally specify a week (ISO format like "502025") and/or a specific student ID.
 	 */
-	async getSchedule(options?: {
-		week?: string;
-		studentId?: string;
-	}): Promise<WeekSchedule> {
+	async getSchedule(options?: { week?: string; studentId?: string }): Promise<WeekSchedule> {
 		const params: Record<string, string> = {};
 		if (options?.week) params.week = options.week;
 

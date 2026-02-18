@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { describe, expect, it, vi } from "vitest";
 import { LectioClient } from "@/client/lectio-client.js";
 import { SessionExpiredError } from "@/errors/index.js";
-import { describe, expect, it, vi } from "vitest";
 
 const fixturesDir = join(__dirname, "../fixtures");
 

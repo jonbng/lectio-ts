@@ -14,8 +14,8 @@ import {
 	SCHEDULE_SELECTORS,
 	SCHEDULE_STATUS_CLASSES,
 } from "../selectors/schedule.selectors.js";
-import { loadHtml } from "../utils/html.js";
 import type { CheerioDocument } from "../utils/html.js";
+import { loadHtml } from "../utils/html.js";
 
 export function parseSchedule(html: string): WeekSchedule {
 	const $ = loadHtml(html);

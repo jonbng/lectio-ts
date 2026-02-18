@@ -1,32 +1,28 @@
 // Public API
 export { LectioClient, type LectioClientOptions } from "./client/index.js";
-
-// Schemas & Types
-export type {
-	SessionInfo,
-	WeekSchedule,
-	ScheduleDay,
-	ScheduleLesson,
-	LessonStatus,
-	ModuleInfo,
-	Teacher,
-	Room,
-	Subject,
-	Homework,
-} from "./schemas/index.js";
-
 // Errors
 export {
-	LectioError,
 	AuthenticationError,
-	SessionExpiredError,
+	LectioError,
 	NetworkError,
 	ParseError,
+	SessionExpiredError,
 } from "./errors/index.js";
-
 // Parsers (for advanced usage / offline testing)
-export { parseSchedule } from "./parsers/index.js";
-export { parseAuthState } from "./parsers/index.js";
+export { parseAuthState, parseSchedule } from "./parsers/index.js";
+// Schemas & Types
+export type {
+	Homework,
+	LessonStatus,
+	ModuleInfo,
+	Room,
+	ScheduleDay,
+	ScheduleLesson,
+	SessionInfo,
+	Subject,
+	Teacher,
+	WeekSchedule,
+} from "./schemas/index.js";
 
 // Session utilities (for advanced usage)
-export { extractAspNetFields, buildPostbackData } from "./session/index.js";
+export { buildPostbackData, extractAspNetFields } from "./session/index.js";
